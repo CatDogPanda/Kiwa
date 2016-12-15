@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="style.css" rel="Stylesheet" type="text/css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="js/ding.js" type="text/javascript"></script>
+		<link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/jquery/CSS3-digital-clock/index.html" />
+		<title>Kiwa</title>
+	</head>
+	<body>
+		
+		<a href="Hoofdmenu.html"><div class="vierkant">
+			<SCRIPT class="Begroeting" TYPE="text/javascript">
+			
+
+			function initArray() {
+			this.length = initArray.arguments.length;
+			for (var i = 0; i < this.length; i++)
+			this[i+1] = initArray.arguments[i];
+			}
+
+			var dagArray = new initArray("zondag","maandag", "dinsdag","woensdag","donderdag","vrijdag","zaterdag");
+
+			var maandArray = new initArray("januari","februari","maart","april","mei","juni","juli", "augustus","september","oktober","november","december");
+
+			var nu = new Date();
+
+			var uren = nu.getHours();
+			var uren2 = ((uren < 10) ? "0" : "") + uren;
+			var minuten = nu.getMinutes();
+			var minuten2 = ((minuten < 10) ? ":0" : ":") + minuten;
+
+			if (nu.getHours() >= 18)
+			var welkom = ("Goedenavond Gijsbert, ");
+			else if (nu.getHours() >= 12)
+			var welkom = ("Goedemiddag Gijsbert, ");
+			else if (nu.getHours() >= 6)
+			var welkom = ("Goedemorgen Gijsbert, ");
+			else
+			var welkom = ("Goedenacht Gijsbert, ");
+
+			var bericht = welkom;
+
+			document.write(bericht);
+
+			
+			</SCRIPT>
+
+
+			<div class="container">
+				<div class="clock">
+					<div id="Date"></div>
+						<ul>
+							<li id="hours"> </li>
+						    <li class="point">:</li>
+						    <li id="min"> </li>
+						    <li id="point">:</li>
+						    <li id="sec"> </li>
+						</ul>
+					<div class="Stappenteller">
+						<img src="GOEIEICONS/foot.png" alt="schoenen">
+						<span>700 stappen</span>
+					</div>
+				</div>
+				
+			</div>
+		</div></a>
+
+		<div class="terugknop">
+		</div>
+
+	</body>
+</html>
+
+
